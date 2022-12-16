@@ -1,0 +1,171 @@
+.mainSection {
+  position: relative;
+  display: inline-block; /* <= shrinks container to image size */
+  transition: transform 150ms ease-in-out;
+}
+
+@media (max-width: 450px) {
+  .mainSection {
+      margin-top: 3.5rem !important;
+  }
+}
+
+.mainSection > .mainImage > img {
+  width: 100%;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1500px) {
+  .mainImage {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+
+@media (min-width: 1500px) {
+  .mainImage {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+
+.mainSection > svg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-80%);
+}
+
+.mainContainer {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (min-width: 2000px) {
+  .mainContainer {
+    margin-top: -10rem;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .sectionBackgroundImage {
+    height: 65rem;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 2000px) {
+  .mainContainer {
+    margin-top: -5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .sectionBackgroundImage {
+    height: 65rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainContainer {
+    margin-top: -2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+}
+@media (max-width: 1000px) and (min-width: 500px) {
+  .headerText > h1 {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 3rem;
+      color: var(--bs-light);
+      text-align: start;
+      width: 100%;
+  }
+
+  .headerText > p {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 0.8;
+      color: var(--bs-light);
+      display: none;
+  }
+}
+
+.headerText {
+  width: fit-content;
+  height: 0;
+  position: absolute;
+  top: 32.5%;
+  left: 20%;
+}
+
+@media (min-width: 1000px) {
+  .headerText > h1 {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 6rem;
+      color: var(--bs-light);
+      text-align: start;
+      width: 100%;
+  }
+
+  .headerText > p {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 1.3rem;
+      color: var(--bs-light);
+  }
+}
+
+
+@media (max-width: 500px) and (min-width: 300px) {
+  .headerText > h1 {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 2rem;
+      color: var(--bs-light);
+      text-align: start;
+      width: 100%;
+  }
+
+  .headerText > p {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 0.5;
+      color: var(--bs-light);
+      display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .headerText > h1 {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 1rem;
+      color: var(--bs-light);
+      text-align: start;
+      width: 100%;
+  }
+
+  .headerText > p {
+      width: fit-content;
+      white-space: nowrap;
+      font-size: 0.5;
+      color: var(--bs-light);
+      display: none;
+  }
+}

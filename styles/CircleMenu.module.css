@@ -1,0 +1,131 @@
+
+
+.segment {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transition: 1s cubic-bezier(0, 0.48, 0, 0.89);;
+
+    display: inline-block;
+    -webkit-mask: url(../public/circle-1.svg);
+    mask: url(../public/circle-1.svg);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    background-color: transparent;
+
+    width: 200px;
+    height: 200px;
+
+    cursor: pointer;
+
+    filter: brightness(0.85);
+}
+
+.segment:hover {
+    filter: brightness(1);
+}
+
+.segment:hover > div > .image#thumbnail {
+    opacity: 0;
+}
+
+#thumbnail:first-child {
+    opacity: 1;
+    transition: 1s;
+}
+
+#video {
+    opacity: 0;
+    transition: 1s;
+}
+
+.segment:hover > div > #video {
+    opacity: 1;
+}
+
+.image {
+    position: absolute;
+    width: fit-content;
+    height: 100%;
+}
+
+.image:not(#thumbnail) {
+    transform: scale(1.1) !important;
+    transition: 1s cubic-bezier(0, 0.6, 0, 0.89);
+}
+
+.segment:hover > div > .image:not(#thumbnail) {
+    transform: scale(1) !important;
+}
+
+.title {
+    color: white;
+    z-index: 20;
+    position: absolute;
+    text-align: center;
+    font-family: 'Copperplate Gothic Bold';
+    width: 90%;
+}
+
+  
+  .custom-button-green:hover {
+    background-position:0 0;
+    color: var(--bs-light)  !important;
+  }
+
+.title#topRight {
+    left: 0%;
+    top: 50%;
+}
+
+.title#topLeft {
+    left: 10%;
+    top: 50%;
+}
+
+.title#bottomRight {
+    bottom: 50%;
+    left: 0;
+}
+
+.title#bottomLeft {
+    bottom: 50%;
+    left: 10%;
+}
+
+
+.topRight {
+    transform: rotate(0deg);
+}
+
+.topRight:hover {
+    transform: rotate(0deg) scale(1.1) translate(5%, -5%);
+}
+
+
+.topLeft {
+    transform: rotate(270deg) translateY(-100%);
+}
+
+.topLeft:hover {
+    transform: rotate(270deg) translateY(-100%) scale(1.1) translate(5%, -5%);
+}
+
+.bottomRight {
+    transform: rotate(90deg) translateX(100%);
+}
+
+.bottomRight:hover {
+    transform: rotate(90deg) translateX(100%) scale(1.1) translate(5%, -5%);
+}
+
+.bottomLeft {
+    transform: rotate(180deg) translateY(-100%) translateX(100%);
+}
+
+.bottomLeft:hover {
+    transform: rotate(180deg) translateY(-100%) translateX(100%) scale(1.1) translate(5%, -5%);
+}
+
+

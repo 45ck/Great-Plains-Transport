@@ -1,129 +1,506 @@
-.container {
-  padding: 0 2rem;
+@media (max-width: 1500px) and (min-width: 1000px) {
+  .truckBackground > div {
+    color: var(--bs-light);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 32px;
+    border: 0.25rem var(--bs-secondary) solid;
+    min-width: 50%;
+    transition: 0.3s cubic-bezier(0, 1.16, 0.53, 0.91), 
+      background-position 0.3s,
+      border 0.3s;
+    transform: scale(1);
+    cursor: pointer;
+    background-color: var(--bs-dark-rbg);
+    display: inline-block;
+    background: linear-gradient(to right, var(--bs-light) 0%, var(--bs-light)50%, var(--bs-dark) 50%, var(--bs-dark) 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 1500px) {
+  .truckBackground  > div {
+    color: var(--bs-light);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 45px;
+    border: 0.5rem var(--bs-secondary) solid;
+    min-width: 50%;
+    transition: 0.3s cubic-bezier(0, 1.16, 0.53, 0.91), background-position 0.3s, border 0.3s;
+    transform: scale(1);
+    cursor: pointer;
+    background-color: var(--bs-dark-rbg);
+    display: inline-block;
+    background: linear-gradient(to right, var(--bs-light) 0%, var(--bs-light)50%, var(--bs-dark) 50%, var(--bs-dark) 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 1000px) {
+  .truckBackground > div {
+    color: var(--bs-light);
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border: 0.25rem var(--bs-secondary) solid;
+    min-width: 50%;
+    transition: 0.3s cubic-bezier(0, 1.16, 0.53, 0.91), background-position 0.3s, border 0.3s;
+    transform: scale(1) translateY(17px);
+    cursor: pointer;
+    background-color: var(--bs-dark-rbg);
+    display: inline-block;
+    background: linear-gradient(to right, var(--bs-light) 0%, var(--bs-light)50%, var(--bs-dark) 50%, var(--bs-dark) 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    border-radius: 12px;
+
+  }
+
+  .mainBackground {
+    /*background-image: url("../public/main-video.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;*/
+  }
+
+  .mainVideo {
+    height: 68vh;
+    width: auto !important;
+  }
+
+  .overflowHiddenMobile {
+    overflow: hidden;
+  }
+
+  .truckBackground > div > h1 {
+    font-size: 2rem;
+  }
+
+  .truckBackground > div > svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mainProgressBar {
+    height: 2rem !important;
+  }
+
+  .truckBackground > div:hover,  .truckBackground > div:hover {
+    color: var(--bs-dark);
+    transform: scale(1.05)  translateY(14px);
+    background-position:0 0;
+    border: 0.5rem var(--bs-dark) solid;
+  }
+
+  .truckIdle {
+    left: 0%;
+    position: absolute;
+    transition: 0.3s;
+    color: transparent;
+    transform: translateX(-50%) translateY(-50px);
+    opacity: 0;
+  }
+
+  .truck {
+    left: 50%;
+    color: var(--bs-dark);
+    opacity: 1;
+  }
+
+  .mainLowerTextNormal {
+    transition: 0.3s;
+    position: relative;
+    transform: translateX(0%);
+  }
+
+  .truckBackground  {
+    transform: translateY(-75px) !important;
+  }
+
+  .mainLowerTextHover {
+    transition: 0.3s, color 0.3s;
+    position: relative;
+    transform: translateX(50%) !important;
+    color: transparent !important;
+  }
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.truckBackground  {
+  position: relative;
+  top: 100%;
+  transform: translateY(-115px);
+  width: fit-content;
+  height: 0;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.mainProgressBar {
+    z-index: 0;
+    height: 5rem; 
+    width: 100vw; 
+    position: relative; 
+    transform: translateY(-30px);  
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+
+@media (min-width: 1000px) {
+  .mainBackground {
+    background-image: url("../public/main-video.gif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 56rem;
+      background-position: bottom;
+  }
+
+
+  .truckBackground > div:hover,  .truckBackground > div:hover {
+    color: var(--bs-dark);
+    transform: scale(1.05);
+    background-position:0 0;
+    border: 0.4rem var(--bs-dark) solid;
+  }
+
+  .truckIdle {
+    left: -5%;
+    position: relative;
+    transition: 0.3s;
+    color: transparent;
+    transform: translateX(-50%);
+    top: -3rem;
+    margin-bottom: -3rem;
+    opacity: 0;
+  }
+
+  .truck {
+    left: 50%;
+    color: var(--bs-dark);
+    animation: truckAnimation 1s infinite;
+    animation-delay: 0.3s;
+    opacity: 1;
+  }
+
+  .mainLowerTextNormal {
+    transition: 0.3s ;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    width: fit-content;
+  }
+
+  .mainLowerTextHover {
+    transition: 0.3s, color 0.3s;
+    position: relative;
+    left: 100%;
+    transform: translateX(-50%) !important;
+    color: transparent !important;
+  }
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
 
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+@media screen and (max-width: 1000px) {
+  .mainDisplayText {
+    top: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*background-color: var(--bs-light);*/
+    color: white;
+    padding: 2rem;
+    opacity: 0.9;
     width: 100%;
-    flex-direction: column;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
+@media screen and (min-width: 1000px) and (max-width: 1800px) {
+  .mainDisplayText {
+    top: 8%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*background-color: var(--bs-light);*/
+    color: white;
+    padding: 1rem;
+    opacity: 0.9;
   }
 }
+
+@media screen and (min-width: 1800px) {
+  .mainDisplayText {
+    top: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*background-color: var(--bs-light);*/
+    color: white;
+    padding: 2rem;
+    opacity: 0.9;
+  }
+}
+
+@keyframes truckAnimation {
+  0% { color: var(--bs-dark); transform: translateX(-50%) scale(1); }
+  50% { color: var(--bs-secondary); transform: translateX(-50%) scale(1.1); }
+  100% { color: var(--bs-dark); transform: translateX(-50%) scale(1); }
+}
+
+
+.mainVideoContainer {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media screen and (max-width: 400px) {
+  .mainVideoContainer > * {
+      height: 100%;
+      width: auto;
+      max-height: 55rem;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 400px) {
+  .mainVideoContainer > * {
+      height: 100%;
+      width: auto;
+      max-height: 55rem;
+  }
+}
+
+@media screen and (max-width: 1900px) and (min-width: 1000px) {
+  .mainVideoContainer > * {
+      height: auto;
+      width: auto;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .mainVideoContainer > * {
+      height: auto;
+      width: 100%;
+      transform: translateY(-15%);
+  }
+
+  .mainVideoContainerParent {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.mainDisplayText > h1 {
+  font-weight: bold;
+}
+
+.aussieImageMainTruck {
+    height: 0;
+    width: 0;
+    position: relative;
+    left: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+  .aussieImageMainTruck {
+    top: -13rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .aussieImageMainTruck {
+    top: -19rem;
+  }
+}
+
+.aussieImageMainTruck > * {
+  animation: aussieImage 2.56s infinite;
+}
+
+@keyframes aussieImage {
+  0% {  transform: translateY(-0%);}
+  50% {  transform: translateY(-5%); }
+  100% { transform: translateY(-0%); }
+}
+
+.mainProgressBar > div {
+  background-color: #267F00 !important;
+}
+
+@media (max-width: 1850px) {
+  .scrollText > h2 {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1850px) {
+  .scrollText > h2 {
+    font-size: 10rem;
+  }
+}
+
+.truckIn {
+  background-color: var(--green) !important;
+    color: var(--bs-light);
+    animation-name: truckInAnimation;
+    animation-duration: 2.5s;
+    position: relative;
+}
+
+.truckSvgContainerParent {
+  /* top: -50%; */
+  width: 100%;
+  height: 100%;
+  /* transform: translateY(-50%); */
+  position: absolute;
+  top: 0%;
+  pointer-events: none;
+}
+
+.truckSvgContainer {
+  position: relative;
+  left: 90%; 
+  transform: translateX(110%) translateY(105%);
+  /* top: 50%; */
+  /* left: 50%; */
+  /* top: 20%; */
+  width: fit-content;
+}
+
+.truckInFromRight {
+  background-color: white !important;
+  color: var(--bs-dark);
+  animation-name: truckInAnimationRight;
+  animation-duration: 2.5s;
+  position: relative;
+}
+
+@media (max-width: 1000px) {
+  @keyframes truckInAnimation {
+    0% {
+      opacity: 1;
+      left: -205%;
+    }
+  
+    100% {
+        left: 0%;
+    }
+  }
+
+  @keyframes truckInAnimationRight {
+    0% {
+      opacity: 1;
+      left: 250%;
+    }
+
+    100% {
+        left: 0%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+
+  @keyframes truckInAnimation {
+    0% {
+      opacity: 1;
+      left: -135%;
+    }
+  
+    100% {
+        left: 0%;
+    }
+  }
+
+  @keyframes truckInAnimationRight {
+    0% {
+      opacity: 1;
+      left: 135%;
+    }
+
+    100% {
+        left: 0%;
+    }
+  }
+}
+
+
+  .truckSvgContainerParentRight {
+    /* top: -50%; */
+    width: 100%;
+    height: 100%;
+    /* transform: translateY(-50%); */
+    position: absolute;
+    top: 0%;
+    pointer-events: none;
+  }
+  
+  .truckSvgContainerRight {
+    position: relative;
+    /* left: 80%; */
+    transform: translateX(-50%) translateY(45%);
+    height: 100%;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* top: 20%; */
+  }
+
+  @media (max-width: 1000px) {
+    .margin10 {
+      margin-top: 3.5rem;
+    }
+
+    .whyChooseUsTextContainer {
+      margin-top: 5rem;
+      margin-bottom: 5rem; 
+      overflow: hidden
+    }
+
+    .sideListLeft {
+      width: 100%;
+    }
+
+    .sideListRight {
+      width: 100%;
+    }
+
+    .bigColorSections {
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .margin10 {
+      margin-top: 10rem;
+    }
+
+    .whyChooseUsTextContainer {
+      margin-top: 25rem;
+      margin-bottom: 15rem; 
+      overflow: hidden
+    }
+
+    .sideListLeft {
+      float: left;
+      width: 90%;
+    }
+
+    .sideListRight {
+      float: right;
+      width: 90%;
+    }
+
+    .bigColorSections {
+      padding-top: 40vh;
+      padding-bottom: 40vh;
+    }
+  }
+
+  

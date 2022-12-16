@@ -1,0 +1,83 @@
+.footer {
+    margin-top: -2rem;
+    background-color: var(--bs-light);
+    position: relative;
+    overflow: visible;
+    padding-top: 5rem;
+}
+
+.truck {
+    position: absolute;
+    float: right;
+    height: auto;
+    z-index: 0;
+}
+
+@media (min-width: 2000px) {
+    .truck {
+        right: 0%;
+        top: -35%;
+        width: 35%;
+    }
+
+    .footer {
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 2000px) {
+    .truck {
+        right: 0%;
+        top: -10%;
+        width: 32%;
+    }
+
+    .footer {
+        height: fit-content;
+    }
+}
+
+
+@media (max-width: 1600px) {
+    .truck {
+        display: none !important;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .footer {
+        height: fit-content;
+    }
+}
+
+.listPages {
+    line-height: 2.3rem;
+}
+
+.link {
+    color: var(--green);
+    font-size: 1.3rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--green);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

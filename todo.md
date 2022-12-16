@@ -1,0 +1,1 @@
+- make components have commentes and look good code

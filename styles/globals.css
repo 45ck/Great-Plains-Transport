@@ -1,3 +1,12 @@
+:root  {
+  --bs-success: #468e18 !important;
+  --green: #267F00 !important
+}
+
+.bg-green {
+  background-color: var(--green) !important;
+}
+
 html,
 body {
   padding: 0;
@@ -23,4 +32,71 @@ a {
     color: white;
     background: black;
   }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translate(0, 50%);
+  visibility: hidden;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Copperplate Gothic Bold";
+  src: url(../public/CopperplateGothicBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Secular One Regular";
+  src: url(../public/SecularOne-Regular.ttf) format("truetype");
+}
+
+
+h1, h2 {
+  font-family: 'Copperplate Gothic Bold';
+}
+
+h3, h4, h5 {
+  font-family: 'Secular One Regular';
+}
+
+.custom-button-green {
+  color: var(--bs-dark) !important;
+  transition: background-position 0.3s, border 0.3s, color 0.3s !important;
+  background-color: transparent !important;
+  background: linear-gradient(to right, #267F00 0%, #267F00 50%, transparent 50%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border-radius: 2.5px;
+  color: var(--bs-dark);
+}
+
+.custom-button-green:hover {
+  background-position:0 0;
+  color: var(--bs-light)  !important;
+}
+
+.custom-button-white {
+  color: var(--bs-light) !important;
+  transition: background-position 0.3s, border 0.3s, color 0.3s !important;
+  background-color: transparent !important;
+  background: linear-gradient(to right, var(--bs-light) 0%, var(--bs-light) 50%, transparent 50%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border-radius: 2.5px;
+}
+
+.custom-button-white:hover { 
+  background-position:0 0;
+  color: var(--bs-dark)  !important;
 }

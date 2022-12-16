@@ -1,0 +1,437 @@
+.mainSection {
+    position: relative;
+    display: inline-block;
+    /* <= shrinks container to image size */
+    transition: transform 150ms ease-in-out;
+}
+
+@media (max-width: 450px) {
+    .mainSection {
+        margin-top: 3.5rem !important;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .mainImage {
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .mainImage {
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+}
+
+
+.mainSection>svg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-80%);
+}
+
+.mainContainer {
+    position: relative;
+    z-index: 1;
+}
+
+
+@media (min-width: 2000px) {
+    .mainContainer {
+        margin-top: -10rem;
+    }
+
+    .title {
+        font-size: 4.5rem;
+    }
+
+    .sectionBackgroundImage {
+        height: 65rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 2000px) {
+    .mainContainer {
+        margin-top: -5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .sectionBackgroundImage {
+        height: 65rem;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+    .mainContainer {
+        margin-top: -2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+}
+
+.headerText {
+    width: fit-content;
+    height: 0;
+    position: absolute;
+    top: 32.5%;
+    left: 20%;
+}
+
+@media (min-width: 1000px) {
+    .headerText > h1 {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 6rem;
+        color: var(--bs-light);
+        text-align: start;
+        width: 100%;
+    }
+
+    .headerText > p {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 1.3rem;
+        color: var(--bs-light);
+    }
+}
+
+@media (max-width: 1000px) {
+    .service {
+        width: 12rem !important;
+        height: fit-content !important;
+    }
+
+    
+    .servicesContainer {
+        flex-direction: column;
+    }
+
+    .servicesSelectorContainer {
+        width: 13rem !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .service {
+        width: 10rem !important;
+        height: fit-content !important;
+    }
+
+    .servicesSelectorContainer {
+        width: 10rem !important;
+    }
+    
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+    .headerText > h1 {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 3rem;
+        color: var(--bs-light);
+        text-align: start;
+        width: 100%;
+    }
+
+    .headerText > p {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 0.8;
+        color: var(--bs-light);
+        display: none;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+    .headerText > h1 {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 2rem;
+        color: var(--bs-light);
+        text-align: start;
+        width: 100%;
+    }
+
+    .headerText > p {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 0.5;
+        color: var(--bs-light);
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .headerText > h1 {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 1rem;
+        color: var(--bs-light);
+        text-align: start;
+        width: 100%;
+    }
+
+    .headerText > p {
+        width: fit-content;
+        white-space: nowrap;
+        font-size: 0.5;
+        color: var(--bs-light);
+        display: none;
+    }
+}
+
+
+.servicesSelectorContainer {
+    width: 25rem;
+}
+
+.servicesSelectorContainer>img {
+    width: 100%;
+    height: auto;
+}
+
+
+.service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25rem;
+    height: 25rem;
+    transition: 0.3s, border 0.1s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.service>img {
+    width: 100%;
+    height: auto;
+    transform: scale(0.9);
+    transition: transform 0.2s ease-out;
+}
+
+.service:hover>img {
+    transform: scale(0.95);
+}
+
+.service.active>img {
+    transform: scale(1);
+}
+
+.service>p {
+    background: linear-gradient(180deg, green 49%, green 1%, transparent 50%);
+    background-size: 105% 250%;
+    transition: 0.35s;
+    background-position: 0% 100%;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Secular One Regular', sans-serif;
+}
+
+.service.active {
+    border: 4px solid var(--green);
+}
+
+.service.active>p {
+    background-position: 0% 0%;
+    color: var(--bs-light);
+}
+
+
+.suggestionContainer {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    height: 5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e3f3a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding-top: 0.375rem;
+    height: fit-content;
+    top: 100%;
+}
+
+.suggestionLabel {
+    cursor: pointer;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, 0.0.8s;
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+}
+
+.suggestionLabel:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+.loadingContainer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.loadingContainer.active {
+    background-color: rgb(0 0 0 / 83%);
+    cursor: wait;
+    pointer-events: fill;
+}
+
+.loadingContainer.active>div {
+    left: 50%;
+    top: 50%;
+    position: relative;
+    color: var(--green) !important;
+}
+
+@media (max-width: 1000px) {
+    .inputAddressContainer {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1000px) {
+    .inputAddressText {
+        border-top-right-radius: 0; 
+        border-bottom-right-radius: 0;
+        border-right: 0;
+    }
+
+    .inputAddressInput {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+
+@media (min-width: 2000px) { 
+    .headerHeight {
+        height: 75vh;
+    }
+}
+
+
+@media (min-width: 1500px) and (max-width: 2000px) { 
+    .headerHeight {
+        height: 43rem;
+    }
+}
+
+
+@media (min-width: 1250px) and (max-width: 1500px) { 
+    .headerHeight {
+        height: 35rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) { 
+    .headerHeight {
+        height: 32rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) { 
+    .headerHeight {
+        height: 19rem;
+    }
+}
+
+@media (max-width: 500px) { 
+    .headerHeight {
+        height: 10rem;
+    }
+}
+
+
+.fullscreenApp {
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: white;
+    margin: 0 !important;
+    max-width: 100vw;
+    padding: 5%;
+}
+
+.fullScreenButton {
+    position: absolute;
+    right: 0;
+    width: inherit;
+    background-color: transparent !important;
+    border: none;
+    color: var(--bs-dark) !important;
+    transition: 0.3s cubic-bezier(0, 0.69, 0.25, 1);
+}
+
+.fullScreenButton:hover {
+    transform: scale(1.25);
+    border: none;
+}
+
+.fullScreenButton:active {
+    transform: scale(1.25);
+}
+
+
+.arrowDownButton {
+    background: transparent;
+    border: none;
+    color: var(--bs-light);
+    transition: 0.3s cubic-bezier(0, 0.69, 0.25, 1);
+    transform: scale(1);
+}
+
+.arrowDownButton:hover {
+    transform: scale(1.25);
+}
+
+
+.button {
+    background: linear-gradient(90deg, var(--green) 49%, var(--green) 1%, transparent 50%) !important;
+    background-size: 250% 100% !important;
+    background-position: 0% 100% !important;
+    transition: 0.5s cubic-bezier(0.02, 0.68, 0.25, 1);
+}
+
+.button:hover {
+    background-position: 90% 100% !important; 
+    color: black;
+    text-decoration: underline;
+}
+
+@media (max-width: 350px) {
+    .contactDetails {
+        overflow-wrap: break-word;
+        width: 100vw;
+    }
+}

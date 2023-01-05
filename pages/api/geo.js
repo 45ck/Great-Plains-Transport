@@ -15,7 +15,7 @@ export default function handler(req, res) {
     {name: 'Brisbane', coords:  {"latitude": -27.4675, "longitude": 153.0231}}, 
     {name: 'Perth', coords:  {"latitude": -31.953512, "longitude": 115.857048}}]
 
-  axios.get(`http://api.positionstack.com/v1/forward?access_key=3137cb7d2233a29c59ab097ea72574e7&country=AU&query=${location1FreeText}`).then((res1) => {
+  axios.get(`http://api.positionstack.com/v1/forward?access_key=${process.env.POSSTACK_KEY}&country=AU&query=${location1FreeText}`).then((res1) => {
     const location1Data = res1.data.data[0];
 
     // find the closest capital city to the pickup address excluding Canberra and Hobart.
@@ -40,7 +40,7 @@ export default function handler(req, res) {
         }
     }
 
-    axios.get(`http://api.positionstack.com/v1/forward?access_key=3137cb7d2233a29c59ab097ea72574e7&country=AU&query=${location2FreeText}`).then((res2) => {
+    axios.get(`http://api.positionstack.com/v1/forward?access_key=${process.env.POSSTACK_KEY}&country=AU&query=${location2FreeText}`).then((res2) => {
         const location2Data = res2.data.data[0];
         
         const distance = getDistanceFromLatLonInKm(location1Data.latitude, location1Data.longitude,

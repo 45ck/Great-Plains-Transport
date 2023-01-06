@@ -9,4 +9,5 @@ The Services page is where things get interesting. This page allows users to req
 
 In addition to its functional features, Great Plains Transport features fancy CSS animations and a modern design that looks great on both mobile and desktop devices. The navigation menu is a circle split into four pie slices that users can click to access the different pages.
 
-You can visit the website demo at https://great-plains-transport.vercel.app/ and view the code for this project on this repository. Hosting for the website is provided by Vercel. Thank you for checking out Great Plains Transport!
+## Demo
+You can visit the website demo at https://gpt.calvinkennedy.dev/ and view the code for this project on this repository. Thank you for checking out Great Plains Transport!
